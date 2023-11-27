@@ -39,11 +39,11 @@ class pergunta{
 
     public function postar_pergunta ()
     {
-$sql = "UPDATE tb_perguntas
+        $sql = "UPDATE tb_perguntas
         SET
         pergunta = '" . $this->pergunta . "',
         resposta = '" . $this->resposta . "', 
-        adm_id_resposta = '" . $this->adm_id . "',
+        adm_id_resposta = '" . $this->adm_id_resposta . "',
         status_pergunta = '" . $this->status_pergunta . "'
         WHERE id_pergunta = " . $this->id_pergunta;
 
