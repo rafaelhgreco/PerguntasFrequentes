@@ -1,0 +1,45 @@
+.botao{
+    width: 18px;
+    height: 18px;
+}
+.botao:hover{
+    
+    filter: invert(100%);
+}
+
+body{
+    background-color:#F5F5F5; 
+    font-family: Tahoma;
+}
+
+nav{
+    height: 65px;background-color:#F3F3F3; box-shadow:2px 1px 1.5px #FF9393;
+}
+
+form{
+    height: auto; overflow-x: auto;border: solid 0.5px #AAAAAA; border-radius: 10px;box-shadow:2px 1px 1.5px #E5E5E5;padding: 25px;
+}
+
+.table-container{
+    height: 70vh; overflow-x: auto;border: solid 0.5px #AAAAAA; border-radius: 10px;box-shadow:2px 1px 1.5px #E5E5E5;padding: 10px;
+}
+
+th{
+    padding:10px;
+}
+
+h4{
+    text-align: center;font-weight: bold;
+}
+
+h2{
+    font-size: 20px;margin-right: 125px;
+}
+
+.box-search{
+    display:flex; padding:5px; width:500px; align-items: center;
+}
+
+.logo{
+    margin-left: 33px;height: 65px;margin-top: 10px;
+}

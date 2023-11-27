@@ -1,0 +1,85 @@
+
+
+#tabelaperg{
+  background-color: red;   
+}
+
+
+#ajuda{
+height: 225px;
+border-radius: 10px;
+background-color: #F8F9FA;   
+border: 0.5px ridge hsl(0, 0%, 90%); 
+box-shadow: 1px 2px 2px #E5E5E5;
+}
+
+h4{
+  color: #252525;
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
+}
+footer{
+  
+  color: #252525;
+}
+h3{
+  color: #252525;
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
+  border: 0.5px ridge #E5E5E5; 
+  border-radius: 10px;
+  box-shadow: 0.5px 0.5px 1.5px #E5E5E5;
+  padding: 5px;
+  
+}
+.link{
+  color: #A93146;
+}
+.link:active {
+  transform: scale(0.9);
+}
+.link:hover{
+  color: #FF9393;
+}
+#perguntas{
+    background-color: #252525;
+    color: white;
+}
+#botaoadm{
+  border-radius: 10px;
+  
+}
+
+#admarea{
+  color:#252525;
+}
+
+button {
+  position: relative;
+  display: inline-block;
+  margin: 15px;
+  padding: 1px 3px;
+  
+  text-align: center;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: #f3f3f3;
+  background: transparent;
+  cursor: pointer;
+  transition: ease-out 0.5s;
+  border: 0.5px ridge #c1c1c1;
+  border-radius: 10px;
+  box-shadow: inset 0 0 0 0 #f5f5f5;
+  
+}
+
+button:hover {
+  
+  box-shadow: inset 0 -100px 0 0 #f9f9f9;
+  border: 0.5px ridge #f9f9f9;
+}
+
+button:active {
+  transform: scale(0.9);
+}
+

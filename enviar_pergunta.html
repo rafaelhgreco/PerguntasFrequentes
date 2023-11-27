@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/enviarpergunta.css " rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Poppins:ital,wght@0,400;0,500;1,500&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Enviar Pergunta</title>
+</head>
+
+<body style="background-color: #f5f5f5;font-family: Tahoma;">
+    <header>
+      
+        <nav id="head" class="navbar navbar-expand-lg fixed-top" style="height: 65px;background-color:#F3F3F3; box-shadow:2px 1px 1.5px #FF9393;">
+            <img class="" src="img/FATEC.svg" style="margin-left: 33px;height: 60px;">
+            <div class="container ">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item mx-3">
+                            <h2 class="navbar-brand" style="font-size: 20px;margin-right: 125px;">Central de Ajuda</h2>
+                        </li>
+                        <li class="nav-item mx-3">
+                            <a class="nav-link text-black" href="index.php"> ⬅ Voltar </a>
+                              
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </header>
+    <main>
+        <br><br><br><br><br><br><br>
+        <div  id="formpergunta" class="container" style="height: auto; overflow-x: auto;border: solid 0.5px #AAAAAA; border-radius: 10px;box-shadow:2px 1px 1.5px #E5E5E5; ">
+            <br>
+            <h4>Enviar uma nova sugestão de pergunta</h4>
+            <br><br>
+            <form action="controller/receber_pergunta.php" method="POST">
+                <div class="mb-3">
+                    <label for="nome" class="form-label">Nome</label>
+                    <input type="text" class="form-control" id="nome" name="nome" required>
+                </div>
+    
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+    
+                <div class="mb-3">
+                    <label for="pergunta" class="form-label">Pergunta</label>
+                    <textarea class="form-control" id="pergunta" name="pergunta" rows="4" required></textarea>
+                </div>
+    
+                <div class="mb-3">
+                    <label class="form-label">Situação</label>
+                    <div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="situation1" name="situacao" value="opcão1">
+                            <label class="form-check-label" for="situation1">Aluno</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="situation2" name="situacao" value="opcão2">
+                            <label class="form-check-label" for="situation2">Ex-Aluno</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="situation3" name="situacao" value="opcão3">
+                            <label class="form-check-label" for="situation3">Visitante</label>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+                <button type="reset" class="btn btn-secondary">Limpar</button>
+                <br><br><br>
+            </form>
+        </div>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    </main>
+</body>
+</html>
