@@ -1,4 +1,4 @@
-<?php 
+<?php
 require_once '../class/pergunta.php';
 require_once '../class/admin.php';
 
@@ -21,21 +21,21 @@ $nova_pergunta = new pergunta($id_pergunta);
     <link href="../css/areaadmin.css" rel="stylesheet">
     <title>Dashbord Admin</title>
 </head>
-<body> 
+<body>
     <header>
         <nav class="navbar navbar-expand-lg fixed-top" >
             <img class="logo" src="../img/FATEC.svg" >
             <div class="container ">
-                
+
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse  " id="navbarNav">
                 <ul class="navbar-nav">
                       <li class="nav-item mx-3 ">
-                          
-                          <h2 class="nav-link text-light text-dark">Painel Administrativo</h2> 
-                          
+
+                          <h2 class="nav-link text-light text-dark">Painel Administrativo</h2>
+
                       </li>
                       <li class="nav-item mx-3" >
                           <a class="nav-link text-dark" href="listar_pergunta_sugerida.php" >Perguntas sugeridas</a>
@@ -56,14 +56,14 @@ $nova_pergunta = new pergunta($id_pergunta);
                       </li>
                   </ul>
               </div>
-            </div>    
+            </div>
         </nav>
-        
-    </header>    
+
+    </header>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
     <br><br><br>
     <main>
-        
+
         <div class="container mt-4">
             <br>
             <form action="../controller/postar_pergunta.php" method="POST">
@@ -75,9 +75,9 @@ $nova_pergunta = new pergunta($id_pergunta);
                 </div>
                 <div class="mb-3">
                 <label for="seladm">Selecionar admin: </label>
-                <select name="seladm"> 
+                <select name="seladm">
                     <option value=''>Selecione... </option>
-                    <?php 
+                    <?php
                         foreach($lista_adm as $linha):
                             echo "<option value='{$linha['adm_id_resposta']}'>
                             {$linha['adm_nome']}
@@ -87,7 +87,7 @@ $nova_pergunta = new pergunta($id_pergunta);
                 </select>
                 <br><br>
                 <label for="selstatus">Definir status: </label>
-                <select name="selstatus"> 
+                <select name="selstatus">
                     <option value='RES'>Respondido</option>
                 </select>
                 </div>
@@ -98,12 +98,12 @@ $nova_pergunta = new pergunta($id_pergunta);
                 <div class="d-grid gap-2 d-flex text-center">
                     <button type="submit" class="btn btn-primary ">Adicionar</button>
                     <button type="reset" class="btn btn-secondary">Limpar</button>
-                    
+
                 </div>
             </form>
             <br><br>
         </div>
     </main>
-   
+
 </body>
 </html>
