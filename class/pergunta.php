@@ -23,6 +23,7 @@ class pergunta{
         $this->id_pergunta = $linha['id_pergunta'];
         $this->pergunta = $linha['pergunta'];
         $this->resposta = $linha['resposta'];
+        $this->adm_id_resposta = $linha['adm_id_resposta'];
        
     }
 

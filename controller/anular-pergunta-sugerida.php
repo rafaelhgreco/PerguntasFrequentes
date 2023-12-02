@@ -8,6 +8,6 @@ $pergunta = new Pergunta($id);
 
 $pergunta->anular_pergunta();
 
-header('Location: ../view/listar_pergunta_publicada.php');
+header('Location: ../view/listar_pergunta_anulada.php');
 
 ?>

@@ -79,7 +79,7 @@ $nova_pergunta = new pergunta($id_pergunta);
                     <option value=''>Selecione... </option>
                     <?php 
                         foreach($lista_adm as $linha):
-                            echo "<option value='{$linha['adm_id']}'>
+                            echo "<option value='{$linha['adm_id_resposta']}'>
                             {$linha['adm_nome']}
                             </option>";
                         endforeach
