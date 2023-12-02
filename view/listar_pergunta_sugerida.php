@@ -51,7 +51,7 @@
                         </svg>
                     </button>
                 </div> 
-                <div class="collapse navbar-collapse  " id="navbarNav">
+                
                     <ul class="navbar-nav ">
                         <li class="nav-item mx-3" >
                             <a class="nav-link text-dark" href="listar_pergunta_sugerida.php" >Perguntas sugeridas</a>
@@ -66,7 +66,7 @@
                             <a class="nav-link text-dark" href="listar_pergunta_anulada.php" >Perguntas anuladas</a>
                         </li class="nav-item mx-3">
                             <a class="nav-link text-dark" href="config_conta.php" >Configurações de conta</a>
-                        </li>
+                        </li><div class="collapse navbar-collapse  " id="navbarNav">
                         <li class="nav-item mx-3">
                             <a class="nav-link text-dark" href="../index.php"> ⬅ Voltar </a>
                         </li>
@@ -79,47 +79,48 @@
      
     <br><br><br><br><br>
     
-
-    <div class="container">
-            <div class="table-container">
-                <table class="table table-striped">
-                    
-                    <thead>
-                        <br>
-                        <h4>Perguntas Sugeridas</h4>
-                        <br><br>
-                        <tr>
-                            <th>Ordem</th>
-                            <th>Pergunta</th>
-                            <th>Nome</th>
-                            <th>E-mail</th>
-                            <th>Status</th>
-                            <th>Data Recebimento</th>
-                            <th>Ações</th>
-                        </tr>
-                    </thead>
-                        <tbody class="table">
-                        <?php 
-                        while($user_data = $result-> fetch(PDO::FETCH_ASSOC))
-                        {   
-                            echo"<tr>:";
-                            echo"<td>".$user_data['id_pergunta']."</td>";
-                            echo"<td>".$user_data['pergunta']."</td>";
-                            echo"<td>".$user_data['nome_solicitante']."</td>";
-                            echo"<td>".$user_data['email_solicitante']."</td>";
-                            echo"<td>".$user_data['status_pergunta']."</td>";
-                            echo"<td>".$user_data['data_pergunta']."</td>";
-                            echo "<td>
-                                        <a class='btn btn-lg btn-primary' href='../view/resp_nova_pergunta.php?id_pergunta=$user_data[id_pergunta]'><img class='botao' src='../img/send.svg'></a></button>
-                                        <a class='btn btn-lg btn-danger' href='../controller/anular-pergunta-sugerida.php?id_pergunta=$user_data[id_pergunta]'><img class='botao' src='../img/x-square.svg'></a>
-                                    </td>";
-                        }
-                            
-                    ?>
-                        </tbody>
-                </table>     
+    <main>
+        <div class="container">
+                <div class="table-container">
+                    <table class="table table-striped">
+                        
+                        <thead>
+                            <br>
+                            <h4>Perguntas Sugeridas</h4>
+                            <br><br>
+                            <tr>
+                                <th>Ordem</th>
+                                <th>Pergunta</th>
+                                <th>Nome</th>
+                                <th>E-mail</th>
+                                <th>Status</th>
+                                <th>Data Recebimento</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                            <tbody class="table">
+                            <?php 
+                            while($user_data = $result-> fetch(PDO::FETCH_ASSOC))
+                            {   
+                                echo"<tr>:";
+                                echo"<td>".$user_data['id_pergunta']."</td>";
+                                echo"<td>".$user_data['pergunta']."</td>";
+                                echo"<td>".$user_data['nome_solicitante']."</td>";
+                                echo"<td>".$user_data['email_solicitante']."</td>";
+                                echo"<td>".$user_data['status_pergunta']."</td>";
+                                echo"<td>".$user_data['data_pergunta']."</td>";
+                                echo "<td>
+                                            <a class='btn btn-lg btn-primary' href='../view/resp_nova_pergunta.php?id_pergunta=$user_data[id_pergunta]'><img class='botao' src='../img/send.svg'></a></button>
+                                            <a class='btn btn-lg btn-danger' href='../controller/anular-pergunta-sugerida.php?id_pergunta=$user_data[id_pergunta]'><img class='botao' src='../img/x-square.svg'></a>
+                                        </td>";
+                            }
+                                
+                        ?>
+                            </tbody>
+                    </table>     
+                </div>
             </div>
-        </div>
-        <script src="../scripts/script_sugerida.js"> </script>
+    </main>
+    <script src="../scripts/script_sugerida.js"> </script>
 </body>
 </html>

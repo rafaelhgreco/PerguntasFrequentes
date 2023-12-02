@@ -12,7 +12,7 @@ if(!empty($_GET['search']))
     $data = $_GET['search'];
     $sql = "SELECT p.id_pergunta,p.pergunta,p.resposta,p.email_solicitante,p.status_pergunta,a.adm_nome,p.data_pergunta,p.data_resposta
      FROM tb_perguntas p JOIN tb_adm a 
-     ON p.fk_tb_adm_adm_id=a.adm_id
+     ON p.adm_id_resposta=a.adm_id
      WHERE (id_pergunta LIKE '%$data%' or pergunta LIKE '%$data%' or resposta LIKE '%$data%') and status_pergunta = ' RES' ORDER BY id_pergunta DESC
      ";
 }

@@ -41,18 +41,14 @@ class admin {
 
     }
 
-    public function admin_mudar_senha()
+    public function admin_mudar()
     {
         $sql = "UPDATE tb_adm SET 
+        usuario = '". $this->usuario. "',
         senha = '". $this->senha. "'
         WHERE adm_id = ".$this->adm_id;
         include "../conexao.php";
         $conexao-> exec($sql);
-
-    }
-
-    public function admin_mudar_login()
-    {
 
     }
 

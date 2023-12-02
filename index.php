@@ -111,13 +111,19 @@
                 <?php
                     while ($user_data = $result->fetch(PDO::FETCH_ASSOC)):
                  ?>
+                
                 <h2  class="accordion-header" style="color:white;background-color:#3F3F3F; border-radius:1px;padding:20px; box-shadow:1px 1px 1px #252525;" id="heading<?php echo $user_data['id_pergunta']; ?>">
+                    
                     <button id="perguntas<?php echo $user_data['id_pergunta']; ?>" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?php echo $user_data['id_pergunta']; ?>" aria-expanded="true" aria-controls="collapse<?php echo $user_data['id_pergunta']; ?>">
                         <label><?php echo $user_data['pergunta']; ?></label>
+                        
                     </button>
+                    
                 </h2>
+                <span> + </span>
                 <div style="color:#252525; background-color:#f1f1f1; border-radius:11px;padding:20px; box-shadow:1px 1px 1px #252525;" id="collapse<?php echo $user_data['id_pergunta']; ?>" class="accordion-collapse collapse show" aria-labelledby="heading<?php echo $user_data['id_pergunta']; ?>" data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
+                        
                         <label><?php echo $user_data['resposta']; ?></label>
                     </div>
                 </div>
