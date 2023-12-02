@@ -1,11 +1,10 @@
-<?php 
-
-
-
-
-
-
+<?php
+require_once "../class/admin.php";
+require_once "../conexao.php";
+$admin_mudar = new admin();
+$lista = $admin_mudar->admin_listar();
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -62,7 +61,26 @@
     <br><br><br><br><br><br>
 
     <main>
-        <p> Fazer as altereções aqui!!!!</p>
+        <div class="container mt-4">
+            <form action="../controller/alterar_senha.php" method="post">
+            <label for="seladm">Selecione o Administrador: </label><br>
+            <br>
+            <select name="seladm">
+                            <option value=''>Selecione... </option>
+                            <?php
+                                foreach($lista as $linha):
+                                    echo "<option value='{$linha['adm_id']}'>
+                                    {$linha['adm_nome']}
+                                    </option>";
+                                endforeach
+                            ?>
+            </select>
+            <br><br>
+            <label for="newPassword">Nova Senha:</label><br><br>
+            <input type="password" id="newPassword" name="newPassword"><br><br>
+            <input type="submit" value="Alterar Senha">
+            </form>
+        </div>
     </main>
 
         
